@@ -1,4 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* generell styling */
+
+:root {
+  --earth-bg: #f6f5f3;
+  --earth-brown: #7c5c3e;
+  --earth-accent: #bfa980;
+  --earth-dark: #3e2c1c;
+  --earth-light: #fffdfa;
+  --font-main: "Montserrat", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: var(--earth-bg);
+  color: var(--earth-dark);
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+header {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-main);
+  font-weight: 500;
+  color: var(--earth-brown);
+  letter-spacing: 0.03em;
+  margin-top: 2rem;
+  margin-bottom: 0.7em;
+}
+
 h1 {
-  color: red;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+/* media queries - för mobil */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
 }

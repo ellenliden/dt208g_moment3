@@ -1,0 +1,39 @@
+<nav>
+  <ul [class.open]="menuOpen">
+    <li>
+      <a
+        routerLink="/home"
+        routerLinkActive="active"
+        aria-current="page"
+        (click)="closeMenu()"
+        >Hem</a
+      >
+    </li>
+    <li>
+      <a routerLink="/portfolio" routerLinkActive="active" (click)="closeMenu()"
+        >Mina verk</a
+      >
+    </li>
+    <li>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()"
+        >Om mig</a
+      >
+    </li>
+    <li>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()"
+        >Kontakt</a
+      >
+    </li>
+  </ul>
+  <button
+    class="nav-toggle"
+    [class.open]="menuOpen"
+    (click)="menuOpen = !menuOpen"
+    aria-label="Öppna meny"
+    [attr.aria-expanded]="menuOpen"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
