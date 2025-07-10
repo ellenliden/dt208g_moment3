@@ -1,0 +1,155 @@
+/* Converter styling */
+
+.converter-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem 0rem;
+  background-color: #ffffff;
+}
+
+.converter-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.converter-text {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 40rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.converter-container {
+  max-width: 38rem;
+  margin: 0 auto 4rem auto;
+  background: #f8f6f2;
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.converter-block {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.converter-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.converter-block h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  color: #7c5c3e;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.converter-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.converter-input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.converter-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #7c5c3e;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.converter-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.converter-input:focus {
+  outline: none;
+  border-color: #bfa980;
+  box-shadow: 0 0 0 2px rgba(191, 169, 128, 0.1);
+}
+
+.converter-equals {
+  font-size: 1.5rem;
+  color: #7c5c3e;
+  font-weight: 400;
+  margin: 0 0.5rem;
+}
+
+/* Resultatet för konverteringar display */
+.converter-result {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+
+.result-value {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #7c5c3e;
+}
+
+.result-unit {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 0.3rem;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .converter-section {
+    padding: 0 1rem;
+  }
+
+  .converter-container {
+    padding: 2rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .converter-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .converter-equals {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .converter-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .converter-input {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .converter-block h2 {
+    font-size: 1.1rem;
+  }
+}

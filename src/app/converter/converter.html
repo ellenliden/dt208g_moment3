@@ -1,47 +1,68 @@
 <section class="converter-section">
-  <h1>Enhetskonverterare</h1>
-  <div class="converter-block">
-    <h2>Meter &harr; Fot (Feet)</h2>
-    <label>
-      Meter:
-      <input
-        type="number"
-        [(ngModel)]="meter"
-        (input)="meterToFeet()"
-        placeholder="Ange meter"
-      />
-    </label>
-    <span>=</span>
-    <label>
-      Fot:
-      <input
-        type="number"
-        [(ngModel)]="feet"
-        (input)="feetToMeter()"
-        placeholder="Ange fot"
-      />
-    </label>
+  <div class="converter-header">
+    <h1>Enhetskonverterare</h1>
+    <p class="converter-text">
+      Konvertera enkelt mellan olika enheter. Skriv in ett värde och se
+      resultatet direkt.
+    </p>
   </div>
-  <div class="converter-block">
-    <h2>Celsius &harr; Fahrenheit</h2>
-    <label>
-      Celsius:
-      <input
-        type="number"
-        [(ngModel)]="celsius"
-        (input)="celsiusToFahrenheit()"
-        placeholder="Ange °C"
-      />
-    </label>
-    <span>=</span>
-    <label>
-      Fahrenheit:
-      <input
-        type="number"
-        [(ngModel)]="fahrenheit"
-        (input)="fahrenheitToCelsius()"
-        placeholder="Ange °F"
-      />
-    </label>
+  <div class="converter-container">
+    <div class="converter-block">
+      <h2>Meter ↔ Fot (Feet)</h2>
+      <div class="converter-row">
+        <div class="converter-input-group">
+          <label class="converter-label">Meter</label>
+          <input
+            type="number"
+            class="converter-input"
+            [(ngModel)]="meter"
+            (input)="meterToFeet()"
+            placeholder="Ange meter"
+            step="0.01"
+          />
+        </div>
+        <span class="converter-equals">=</span>
+        <div class="converter-input-group">
+          <label class="converter-label">Fot</label>
+          <input
+            type="number"
+            class="converter-input"
+            [(ngModel)]="feet"
+            (input)="feetToMeter()"
+            placeholder="Ange fot"
+            step="0.01"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="converter-block">
+      <h2>Celsius ↔ Fahrenheit</h2>
+      <div class="converter-row">
+        <div class="converter-input-group">
+          <label class="converter-label">Celsius</label>
+          <input
+            type="number"
+            class="converter-input"
+            [(ngModel)]="celsius"
+            (input)="celsiusToFahrenheit()"
+            placeholder="Ange °C"
+            step="0.1"
+          />
+        </div>
+        <span class="converter-equals">=</span>
+        <div class="converter-input-group">
+          <label class="converter-label">Fahrenheit</label>
+          <input
+            type="number"
+            class="converter-input"
+            [(ngModel)]="fahrenheit"
+            (input)="fahrenheitToCelsius()"
+            placeholder="Ange °F"
+            step="0.1"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </section>
