@@ -1,1 +1,47 @@
-<p>converter works!</p>
+<section class="converter-section">
+  <h1>Enhetskonverterare</h1>
+  <div class="converter-block">
+    <h2>Meter &harr; Fot (Feet)</h2>
+    <label>
+      Meter:
+      <input
+        type="number"
+        [(ngModel)]="meter"
+        (input)="meterToFeet()"
+        placeholder="Ange meter"
+      />
+    </label>
+    <span>=</span>
+    <label>
+      Fot:
+      <input
+        type="number"
+        [(ngModel)]="feet"
+        (input)="feetToMeter()"
+        placeholder="Ange fot"
+      />
+    </label>
+  </div>
+  <div class="converter-block">
+    <h2>Celsius &harr; Fahrenheit</h2>
+    <label>
+      Celsius:
+      <input
+        type="number"
+        [(ngModel)]="celsius"
+        (input)="celsiusToFahrenheit()"
+        placeholder="Ange °C"
+      />
+    </label>
+    <span>=</span>
+    <label>
+      Fahrenheit:
+      <input
+        type="number"
+        [(ngModel)]="fahrenheit"
+        (input)="fahrenheitToCelsius()"
+        placeholder="Ange °F"
+      />
+    </label>
+  </div>
+</section>
