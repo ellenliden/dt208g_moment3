@@ -1,2 +1,122 @@
-<h1>About</h1>
-<p>about works!</p>
+<section class="about-section">
+  <div class="about-header">
+    <h1>Om Projektet</h1>
+  </div>
+  <div class="about-content">
+    <div class="about-block">
+      <h2>Projektets Syfte</h2>
+      <p>
+        Detta projekt handlar om att skapa en webbplats med Angular, där fokus
+        har legat på att bygga en responsiv och användarvänlig webbplats med
+        flera komponenter och funktioner. Jag har valt att skapa en
+        portfolio-webbplats för keramikverk. Webbplatsen har en stilrent och
+        minimalistisk design.
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Teknisk Implementation</h2>
+      <p>
+        Webbplatsen är byggd med Angular 17 och använder standalone-komponenter
+        för modulär arkitektur. Routing är implementerat för navigation mellan
+        olika sidor: startsida, om mig, portfolio, kontakt och en
+        konverteringssida. Designen enkel och minimalistisk med jordnära färger
+        och typsnitt så som Playfair Display och Montserrat.
+      </p>
+      <p>
+        Responsiv design har varit en viktig del, med hamburgermeny för mobil
+        och tablet samt flexibla layouts som anpassar sig för olika
+        skärmstorlekar. Portfolio-sidan visar keramikverk i ett responsivt
+        grid-system. Kontaktformuläret har validering och loading-states.
+        Konverteringssidan liknar kontakformuläret i sin design. På sidan finns
+        möjligehet att konvertera meter till fot och celsius till fahrenheit.
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Utmaningar och Svårigheter</h2>
+      <p>
+        <strong>Angular-versioner och kompatibilitet:</strong> En av de största
+        utmaningarna i början, var förvirringen kring gamla och nya versioner av
+        Angular. Projektet började med en icke-uppdaterad version av Node.js,
+        men Angular CLI krävde en senare version. Detta ledde till problem med
+        att skapa komponenter automatiskt och krävde manuell implementation av
+        vissa delar.
+      </p>
+      <p>
+        <strong>Standalone vs Classic Components:</strong> Jag pendlade mellan
+        standalone och klassiska komponenter flera gånger baserat på vad jag
+        läst i föreläsningsanteckningarna samt efter att ha tittat på
+        youtube-videos om angular. Då jag såg att folk gjorde olika saker,
+        skapades förvirring bland annat kring imports och modulstruktur.
+      </p>
+      <p>
+        <strong>Bild-hantering:</strong> Jag började med att lägga bilder i en
+        assets-mapp men för att använda de bilderna behövde jag göra
+        uppdateringar i angular.json. Jag valde istället att lägga bilderna i
+        public-mappen och således löste det sig utan att jag behövde göra några
+        uppdateringar i angular.json.
+      </p>
+      <p>
+        <strong>FormsModule och ngModel:</strong> Vid skapandet av
+        konverteringssidan förstod jag vikten av att importera FormsModule för
+        tvåvägsdatabindning. Utan detta fungerade inte [(ngModel)] vilket
+        skapade förvirring kring Angulars modulsystem. Till en start var det
+        svårt att få till [(ngModel)]. Jag blandade nämligen ihop tecknet för
+        dubbelriktad bindning med tecknet för enkelriktad bindning.
+      </p>
+      <p>
+        <strong>Utvecklingsmiljö och CLI:</strong> Jag använde Angular CLI för
+        att skapa komponenter via terminalen med kommandon som `ng generate
+        component`. Detta var mycket effektivt för att skapa komponenter snabbt.
+        För utveckling och testning använde jag Vite som utvecklingsserver,
+        vilket fungerade smidigt och bra
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Lärdomar och Slutsatser</h2>
+      <p>
+        <strong>Angular-ekosystemet:</strong> Projektet har gett förståelse för
+        Angulars arkitektur, från komponenter och routing till dependency
+        injection och modulsystem. Standalone-komponenter visar sig vara mer
+        framtidssäkra. Det är forfarande nytt för mig att använda Angular, men
+        ju mer jag lär mig desto smidigare känns det att jobba med ett ramverk.
+      </p>
+      <p>
+        <strong>Responsiv design:</strong> Arbetet med CSS Grid, Flexbox och
+        media queries stärker förståelsen för webbdesign. Och framförallt att
+        responsivitet är viktigt för att webbplatsen ska fungera på alla
+        enheter.
+      </p>
+      <p>
+        <strong>Versionhantering med GitHub:</strong> Jag får fortsatt en bättre
+        förståelse för hur man använder GitHub för att hantera versioner. Det är
+        ett bra sätt att arbeta på, särskilt i kombination med automatisering av
+        build-processen till Netlify.
+      </p>
+      <p>
+        <strong>Problemlösning:</strong> Problemlösning är en konstant del av
+        webbutveckling. I detta projektet har jag vart tvungen att felsöka och
+        lösa många små problem - allt från routing-problem till
+        styling-utmaningar. Det är viktigt att ha en överblick över hur man kan
+        lösa problem och att inte ge upp (även om man ibland känner för det).
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Tekniska verktyg</h2>
+      <ul class="tech">
+        <li><strong>Frontend:</strong> Angular 17, TypeScript, HTML5, CSS</li>
+        <li>
+          <strong>Utvecklingsserver:</strong> Vite för snabb utveckling och
+          testning
+        </li>
+        <li>
+          <strong>Deployment:</strong> Netlify med automatisk build från GitHub
+        </li>
+        <li><strong>Versionhantering:</strong> Git med GitHub</li>
+      </ul>
+    </div>
+  </div>
+</section>
