@@ -1,59 +1,217 @@
-# Moment3
+# Moment 3 - Angular Webbplats
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+## Keramik-portfolio
 
-## Development server
+En responsiv webbplats byggd med Angular 17 för att visa keramikverk och portfolio. Webbplatsen kombinerar funktionalitet med estetik och följer moderna webbutvecklingsprinciper.
 
-To start a local development server, run:
+## Projektbeskrivning
+
+Detta projekt är en portfolio-webbplats för keramikverk som demonstrerar Angular-utveckling med fokus på:
+
+- **Responsiv design** som fungerar på alla enheter
+- **Modulär arkitektur** med standalone-komponenter
+- **Modern styling** med jordnära färger och minimalistisk stil
+- **Användarvänlig navigation** med Angular Router
+- **Interaktiva funktioner** som konverteringsverktyg
+
+## Netlify
+
+**Webbplats:** [Netlify Deployment](https://your-netlify-url.netlify.app)
+
+## Tekniska verktyg
+
+### Frontend
+
+- **Angular 17** - som ramverk
+- **TypeScript** - för funktion
+- **HTML & CSS** - Semantisk markup och modern styling
+- **Angular Router** - Navigation mellan sidor
+
+### Styling & Design
+
+- **CSS Grid & Flexbox** - Moderna layout-tekniker
+- **Google Fonts** - Playfair Display & Montserrat
+- **Responsiv design** - Mobile-first approach
+
+### Utvecklingsverktyg
+
+- **Angular CLI** - Komponentgenerering och projektstruktur
+- **Vite** - Snabb utvecklingsserver
+- **Git & GitHub** - Versionshantering
+- **Netlify** - Automatisk deployment
+
+## Design & UX
+
+### Färgschema
+
+- **Primär färg:** `#7c5c3e` (Brun)
+- **Sekundär färg:** `#bfa980` (Ljusbrun)
+- **Bakgrund:** `#f8f6f2` (Varm vit)
+- **Text:** `#333` (Mörkgrå)
+
+### Typografi
+
+- **Rubrik:** Playfair Display (serif)
+- **Brödtext:** Montserrat (sans-serif)
+- **Responsiv textstorlek** för alla enheter
+
+### Komponenter
+
+- **Navbar:** Responsiv hamburgermeny
+- **Footer:** Kontaktinfo och sociala länkar
+- **Portfolio:** Grid-layout med bilder
+- **Kontaktformulär:** Validering och loading-states
+- **Konverterare:** Realtidskonvertering
+
+## Installation & Utveckling
+
+### Förutsättningar
+
+- Node.js (v20.19 eller senare)
+- npm
+- Git
+
+### Installation
+
+1. **Klona repository**
+
+   ```bash
+   git clone https://github.com/ditt-användarnamn/moment3.git
+   cd moment3
+   ```
+
+2. **Installera dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Starta utvecklingsserver**
+
+   ```bash
+   npm start
+   ```
+
+4. **Öppna i webbläsare**
+   ```
+   http://localhost:4200
+   ```
+
+### Bygga för produktion
 
 ```bash
-ng serve
+npm run build
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Sidor & Funktioner
 
-## Code scaffolding
+### Startsida
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Intro-text och hero-sektion
+- Feature-kort med keramikverkens "egenskaper"
+- Call-to-action knappar för navigation
+
+### Portfolio
+
+- Responsivt grid med 8 keramikverk
+- Bildgalleri med produktnamn och produktbeskrivningar
+
+### Kontakt
+
+- Validerat kontaktformulär
+- Loading-states och felhantering
+- Responsiv design för alla enheter
+
+### Konverterare
+
+- Meter ↔ Fot konvertering
+- Celsius ↔ Fahrenheit konvertering
+- Realtidsuppdatering med ngModel
+
+### Om Projektet
+
+- Detaljerad projektbeskrivning
+- Teknisk implementation
+- Utmaningar och lärdomar
+- Framtida förbättringar
+
+## Utvecklingsprocess
+
+### Komponentstruktur
+
+Alla komponenter är standalone-komponenter med:
+
+- **TypeScript-logik** (.ts)
+- **HTML-innehåll** (.html)
+- **CSS-styling** (.css)
+
+### Routing
+
+```typescript
+export const routes: Routes = [
+  { path: "home", component: Home },
+  { path: "about", component: About },
+  { path: "portfolio", component: Portfolio },
+  { path: "contact", component: Contact },
+  { path: "converter", component: Converter },
+  { path: "", redirectTo: "home", pathMatch: "full" },
+];
+```
+
+### Styling-approach
+
+- **Globala stilar** i `styles.css`
+- **Komponent-specifika stilar** i respektive `.css`-filer
+- **CSS-variabler** för konsistent färgpalett
+- **Media queries** för responsiv design
+
+## Testning
+
+### Utvecklingstestning
 
 ```bash
-ng generate component component-name
+npm test
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Deployment
 
-```bash
-ng generate --help
-```
+### Netlify (Automatisk)
 
-## Building
+- Kopplat till GitHub repository
+- Automatisk build vid push
+- Live deployment på:
 
-To build the project run:
+### Manuell deployment
 
-```bash
-ng build
-```
+1. Bygg projektet: `npm run build`
+2. Ladda upp `dist/`-mappen till din webbserver
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Prestanda & Optimering
 
-## Running unit tests
+### Bilder
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Bilder lagrade i `public/`-mappen
+- Lazy loading för bättre prestanda
 
-```bash
-ng test
-```
+## Problem & Lösningar
 
-## Running end-to-end tests
+### Node.js-version
 
-For end-to-end (e2e) testing, run:
+- **Problem:** Angular CLI kräver Node.js v20.19+
+- **Lösning:** Uppdatera Node.js eller använd nvm
 
-```bash
-ng e2e
-```
+### FormsModule
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- **Problem:** ngModel fungerar inte utan FormsModule
+- **Lösning:** Importera FormsModule i komponenten
 
-## Additional Resources
+### Asset-hantering
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Problem:** Bilder i src/assets kräver angular.json-konfiguration
+- **Lösning:** Använd public/-mappen för statiska filer
+
+## Kontakt
+
+**Utvecklare:** Ellen Lidén  
+**Email:** elli1807@student.miun.se  
+**GitHub:** https://github.com/ellenliden/dt208g_moment3.git
